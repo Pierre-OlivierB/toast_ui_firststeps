@@ -31,10 +31,17 @@ const chartData = {
   ],
 };
 const options = {
+  //   series: { spline: true },
+  //   series: { selectable: true, eventDetectType: "grouped" },
+  series: { stack: { type: "percent" }, zoomable: true },
   chart: { title: "Variation du poids", width: 1300, height: 400 },
   xAxis: { pointOnColumn: false, title: { text: "Courses" } },
   yAxis: { title: "Poids" },
 };
 const el = document.getElementById("chart");
 
-const chart = toastui.Chart.areaChart({ el, data: chartData, options });
+const chart = toastui.Chart.areaChart({
+  el,
+  data: chartData,
+  options,
+});
