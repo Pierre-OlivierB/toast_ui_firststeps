@@ -1,4 +1,4 @@
-const colonne = [
+const colonne_two = [
   {
     header: "Nom du haras",
     name: "nomHaras",
@@ -21,7 +21,7 @@ const colonne = [
   },
 ];
 
-const gridData = [
+const gridData_two = [
   {
     nomHaras: "Emma",
     ville: "Montpellier",
@@ -108,7 +108,7 @@ const gridData = [
   },
   {
     nomHaras: "West",
-    ville: "Pınarbaşı",
+    ville: "Pinarbaşi",
     dateCreation: "2012",
     surface: 98,
     active: false,
@@ -199,10 +199,20 @@ const gridData = [
   },
 ];
 
-const grid = new tui.Grid({
-  el: document.getElementById("grid"),
-  data: gridData,
+const grid_two = new tui.Grid({
+  el: document.getElementById("grid_two"),
+  data: gridData_two,
   scrollX: false,
   scrollY: false,
-  columns: colonne,
+  columns: colonne_two,
+});
+tui.Grid.applyTheme("striped", {
+  cell: {
+    header: {
+      background: "#eef",
+    },
+    evenRow: {
+      background: "#fee",
+    },
+  },
 });
